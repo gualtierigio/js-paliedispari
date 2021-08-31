@@ -24,13 +24,21 @@ function random5(min, max) {
   
   let pcNumber = random5(1,6);
 
-console.log(pcNumber);
-
 function pariDispari(number){
     if (number % 2 == 0){
         return true;
     }else {
         return false
     }
+}
+
+let numeroUtente = prompt("inserisci un numero da 1 a 5");
+
+if (numeroUtente < 1 || numeroUtente > 5){
+    alert("giochi corretto cortesemente, ora scelgo io")
+    numeroUtente = console.log(random5(1,5));
+}else if (numeroUtente != Number){
+    alert("i numeri sono numeri, ora scelgo io")
+    numeroUtente = console.log(random5(1,5));
 }
 
