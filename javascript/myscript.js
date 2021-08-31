@@ -18,6 +18,12 @@ if (parolaUtente == palindroma(parolaUtente)){
 
 let utentePariODispari = prompt("scegli pari o dispari")
 
+if (utentePariODispari != "pari" || utentePariODispari.length < 4){
+    utentePariODispari = "pari";
+}else if (utentePariODispari != "dispari" || utentePariODispari.length > 7){
+    utentePariODispari = "dispari";
+}
+
 function random5(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
