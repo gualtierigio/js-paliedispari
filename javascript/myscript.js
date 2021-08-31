@@ -16,8 +16,7 @@ if (parolaUtente == palindroma(parolaUtente)){
     console.log(parolaUtente + (" ah ah aha, non hai detto la parola magica!"));
 }*/
 
-let utentePari = document.getElementById("pari");
-let utenteDispari =document.getElementById("dispari");
+let utentePariODispari = prompt("scegli pari o dispari")
 
 function random5(min, max) {
     min = Math.ceil(min);
@@ -35,21 +34,23 @@ function pariDispari(number){
     }
 }
 
-let numeroUtente = prompt("inserisci un numero da 1 a 5");
+let numeroUtente = parseInt(prompt("inserisci un numero da 1 a 5"));
 
 if (numeroUtente < 1 || numeroUtente > 5){
     alert("giochi corretto cortesemente, ora scelgo io")
-    numeroUtente = console.log(random5(1,6));
-}else if (numeroUtente == NaN){
+    numeroUtente = random5(1,6);
+}else if (isNaN(numeroUtente)){
     alert("i numeri sono numeri, ora scelgo io")
-    numeroUtente = console.log(random5(1,6));
+    numeroUtente = random5(1,6);
 }
 
 let result = pcNumber + numeroUtente;
 
 console.log(result);
 
-if (utentePari == true && pariDispari(result) == true || utenteDispari == false && pariDispari(result) == false){
+console.log(utentePariODispari);
+
+if (utentePariODispari == "pari" && pariDispari(result) == true || utentePariODispari == "dispari" && pariDispari(result) == false){
     console.log("utente vince");
 }else {
     console.log("vince il banco, mi spiace");
